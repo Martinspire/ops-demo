@@ -69,3 +69,16 @@ Full end-to-end test: completed on `ops-demo-tryout` from clean baseline through
   - root recursive discovery
   - MetalLB CRD `caBundle` drift handling
   - Tekton empty `kustomize` drift fix in solution flow
+
+## Recent Changes (2026-03-03)
+
+- `ops-demo-tryout` reset for continuation from Exercise 03:
+  - VM recreated from scratch
+  - local `main` reset to `upstream/main`
+  - solution 01 and 02 merged in sequence
+  - tags created: `tryout-after-solution-01`, `tryout-after-solution-02`, `tryout-ready-assignment-03`
+- Tryout manifests updated to fork URL `https://github.com/paulharkink/ops-demo-tryout.git`
+  for `root`, Argo values source, and `podinfo` app.
+- Verified runtime handoff state in tryout cluster:
+  - `root` and `podinfo` are `Synced/Healthy`
+  - `podinfo` deployment reaches `1/1` ready

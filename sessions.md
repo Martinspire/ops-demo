@@ -4,6 +4,39 @@ Per-session progress notes. Newest entry first.
 
 ---
 
+## 2026-03-03 — Tryout reset and handoff ready for Exercise 03 (SESSION 6)
+
+**Session goal**: Prepare `ops-demo-tryout` so workshop flow can resume directly from Exercise 03.
+
+**Completed this session**:
+- In `ops-demo-tryout`:
+  - destroyed and recreated VM (`vagrant destroy -f`, `vagrant up`)
+  - hard reset `main` to `upstream/main`
+  - merged `upstream/solution/01-argocd-bootstrap` and `upstream/solution/02-deploy-podinfo`
+  - created tags:
+    - `tryout-after-solution-01`
+    - `tryout-after-solution-02`
+- Patched repo URLs for tryout fork:
+  - `apps/root.yaml`
+  - `apps/argocd.yaml`
+  - `apps/apps/podinfo.yaml`
+  - URL set to `https://github.com/paulharkink/ops-demo-tryout.git`
+- Bootstrapped from host and re-registered Argo repository secret for tryout repo.
+- Forced Argo refresh after initial auth-cache miss; root then synced and child apps were created.
+- Verified handoff state:
+  - `root` app: `Synced/Healthy`
+  - `podinfo` app: `Synced/Healthy`
+  - `podinfo` workload: `1/1 Running`
+- Committed tryout URL patch in tryout repo:
+  - `9208d45` `chore: point argo apps to ops-demo-tryout repo`
+- Added tag for resume point:
+  - `tryout-ready-assignment-03`
+
+**Notes**:
+- First podinfo pull on fresh VM can take longer; manual `k3s ctr images pull` confirmed/fixed delayed image availability during this run.
+
+---
+
 ## 2026-03-01 — Full end-to-end validation + out-of-box hardening (SESSION 5)
 
 **Session goal**: Run the complete workshop flow in a clean tryout repo/VM and close all blockers until 01→06 works out of the box.
