@@ -15,7 +15,6 @@ spec:
         valueFiles:
           - $values/manifests/networking/ingress-nginx/values.yaml
     - repoURL: https://github.com/Martinspire/ops-demo
-
       targetRevision: HEAD
       ref: values
   destination:
