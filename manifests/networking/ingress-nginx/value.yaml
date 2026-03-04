@@ -1,0 +1,11 @@
+controller:
+  ingressClassResource:
+    name: nginx
+    default: true
+  service:
+    type: LoadBalancer
+    loadBalancerIP: "192.168.56.200"
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi

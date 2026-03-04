@@ -21,7 +21,7 @@ spec:
               name: http
           env:
             - name: PODINFO_UI_COLOR
-              value: "#00ff00"
+              value: "#2ecc71"
           readinessProbe:
             httpGet:
               path: /readyz
