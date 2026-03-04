@@ -134,7 +134,7 @@ metadata:
 spec:
   project: workshop
   source:
-    repoURL: JOUW_FORK_URL
+    repoURL: https://github.com/Martinspire/ops-demo
     targetRevision: HEAD
     path: manifests/ci/tekton
   destination:
@@ -191,7 +191,7 @@ Waarom dit:
 - Alle permissies voor `validate` en eventuele cluster-calls hangen aan dit account.
 
 **`manifests/ci/pipeline/pipeline.yaml`** — zie de solution branch voor de volledige inhoud, of kopieer uit
-`reference-solution`: 
+`reference-solution`:
 
 > **HOST**
 > ```bash
@@ -220,7 +220,7 @@ spec:
     serviceAccountName: pipeline-runner
   params:
     - name: repo-url
-      value: JOUW_FORK_URL
+      value: https://github.com/Martinspire/ops-demo
     - name: new-tag
       value: "6.7.0"
   workspaces:
@@ -264,7 +264,7 @@ metadata:
 spec:
   project: workshop
   source:
-    repoURL: JOUW_FORK_URL
+    repoURL: https://github.com/Martinspire/ops-demo
     targetRevision: HEAD
     path: manifests/ci/pipeline
   destination:
@@ -345,7 +345,7 @@ metadata:
 spec:
   project: workshop
   source:
-    repoURL: JOUW_FORK_URL
+    repoURL: https://github.com/Martinspire/ops-demo
     targetRevision: HEAD
     path: manifests/ci/dashboard
   destination:

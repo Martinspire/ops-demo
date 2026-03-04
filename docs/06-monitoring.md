@@ -106,7 +106,7 @@ spec:
       helm:
         valueFiles:
           - $values/manifests/monitoring/values.yaml
-    - repoURL: JOUW_FORK_URL
+    - repoURL: https://github.com/Martinspire/ops-demo
       targetRevision: HEAD
       ref: values
   destination:

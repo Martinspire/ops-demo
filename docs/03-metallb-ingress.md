@@ -115,7 +115,7 @@ spec:
       helm:
         valueFiles:
           - $values/manifests/networking/metallb/values.yaml
-    - repoURL: JOUW_FORK_URL
+    - repoURL: https://github.com/Martinspire/ops-demo
       targetRevision: HEAD
       ref: values
   destination:
@@ -149,7 +149,7 @@ metadata:
 spec:
   project: workshop
   source:
-    repoURL: JOUW_FORK_URL
+    repoURL: https://github.com/Martinspire/ops-demo
     targetRevision: HEAD
     path: manifests/networking/metallb
     directory:
@@ -214,7 +214,7 @@ spec:
       helm:
         valueFiles:
           - $values/manifests/networking/ingress-nginx/values.yaml
-    - repoURL: JOUW_FORK_URL
+    - repoURL: https://github.com/Martinspire/ops-demo
       targetRevision: HEAD
       ref: values
   destination:

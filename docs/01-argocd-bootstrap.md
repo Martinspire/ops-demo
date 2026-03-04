@@ -151,7 +151,7 @@ Als je **GitHub** gebruikt:
 4. Zet minimaal repository permission:
     - `Contents: Read`
 
-Dit is voldoende voor ArgoCD sync (read-only).  
+Dit is voldoende voor ArgoCD sync (read-only).
 Gebruik je later Tekton om te pushen, dan heb je `Contents: Read and write` nodig.
 
 Bij HTTPS + PAT geldt:
@@ -222,7 +222,7 @@ spec:
       helm:
         valueFiles:
           - $values/manifests/argocd/values.yaml
-    - repoURL: JOUW_FORK_URL
+    - repoURL: https://github.com/Martinspire/ops-demo
       targetRevision: HEAD
       ref: values
   destination:
@@ -237,7 +237,7 @@ spec:
       - ServerSideApply=true
 ```
 
-Vervang `JOUW_FORK_URL` door jouw fork-URL (staat ook in `apps/root.yaml`).
+Vervang `https://github.com/Martinspire/ops-demo` door jouw fork-URL (staat ook in `apps/root.yaml`).
 Commit en push: ArgoCD beheert zichzelf vanaf nu via Git.
 
 ---

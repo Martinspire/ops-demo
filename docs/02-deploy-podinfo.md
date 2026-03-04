@@ -129,7 +129,7 @@ metadata:
 spec:
   project: workshop
   source:
-    repoURL: JOUW_FORK_URL
+    repoURL: https://github.com/Martinspire/ops-demo
     targetRevision: HEAD
     path: manifests/apps/podinfo
   destination:
@@ -143,7 +143,7 @@ spec:
       - CreateNamespace=true
 ```
 
-Vervang `JOUW_FORK_URL` door jouw fork-URL.
+Vervang `https://github.com/Martinspire/ops-demo` door jouw fork-URL.
 
 ---
 
